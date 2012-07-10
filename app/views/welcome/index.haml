@@ -11,9 +11,30 @@
 				= link_to "Entrar", "", :class => "btn btn-primary"
 
 .wrapper
-	.container{:style => "height: 400px"}
+	.horizontal-scroll-container{:style => "height: 400px;"}
+		#box1{:class => "box"}
+			%h2="First Box"
+			%p
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
+		#box2{:class => "box"}
+			%h2="First Box"
+			%p
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
+		#box3{:class => "box"}
+			%h2="First Box"
+			%p
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
+		 
+		 
 
 .footer
 	.container
 		.footer-wrapper
 			Copyright &#169; Novos Tempos 2012
+
+:javascript
+
+$(document).ready(function () {
+	$.localScroll.defaults.axis = 'x';
+	$.localScroll();
+});
