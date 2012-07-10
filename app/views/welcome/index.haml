@@ -1,0 +1,14 @@
+.back
+	.container
+		.header-wrapper
+			= image_tag("logo.png", :height => '200px')
+			.login-form
+				%h1{:class => 'login'}= "Entrada"
+				%input{:class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :type => :text, :placeholder => "Email ou nº de telefone"}
+				%br
+				%input{:class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px",:type => :password, :placeholder => "Password"}
+				%br
+				= link_to "Entrar", "", :class => "btn btn-primary"
+
+.wrapper
+	.container{:style => "height: 400px"}

@@ -1,0 +1,48 @@
+body {
+	margin: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	background-color: #F2F2F2;
+}
+
+.back{
+	position: fixed;
+	height: 500px;
+	width: 100%;
+	top: 0;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+.wrapper {
+	background: #42130c;
+	min-height: 100%;
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+	border-top: 1px solid white;
+	margin-top: 250px;
+	z-index: 2;
+	position: relative;
+	-webkit-transition: all .3s ease-out;
+}
+
+.header-wrapper {
+	margin-top: 10px;
+}
+
+.login-form{
+	position: absolute;
+	top: 50px;
+	right: 100px;
+}
+
+h1.login {
+	color: #42130c;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
