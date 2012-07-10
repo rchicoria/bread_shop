@@ -1,40 +1,50 @@
-.back
-	.container
-		.header-wrapper
-			= image_tag("logo.png", :height => '200px')
-			.login-form
-				%h1{:class => 'login'}= "Entrada"
-				%input{:class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :type => :text, :placeholder => "Email ou nº de telefone"}
-				%br
-				%input{:class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px",:type => :password, :placeholder => "Password"}
-				%br
-				= link_to "Entrar", "", :class => "btn btn-primary"
+#start
+	.back
+		.container
+			.header-wrapper
+				= image_tag("logo.png", :height => '200px')
+				.login-form
+					%h1{:class => 'login'}= "Entrada"
+					%input{:class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :type => :text, :placeholder => "Email ou nº de telefone"}
+					%br
+					%input{:class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px",:type => :password, :placeholder => "Password"}
+					%br
+					= link_to "Entrar", "", :class => "btn btn-primary"
 
-.wrapper
-	.horizontal-scroll-container{:style => "height: 400px;"}
-		#box1{:class => "box"}
-			%h2="First Box"
-			%p
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
-		#box2{:class => "box"}
-			%h2="First Box"
-			%p
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
-		#box3{:class => "box"}
-			%h2="First Box"
-			%p
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit ullamcorper ornare. Nam hendrerit sollicitudin urna non ultricies. Phasellus condimentum auctor risus, at accumsan tellus tempor vel. Nunc mattis eleifend dolor at adipiscing.
-		 
-		 
+	.wrapper
+		.horizontal-scroll-container{:style => "height: 350px;"}
+			#box1{:class => "box"}
+				%h2{:style => "color: #ffffff"}="Quem Somos"
+				%p
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper 
+			#box2{:class => "box"}
+				%h2{:style => "color: #ffffff"}="Os nossos produtos"
+				%p
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit 
+	.left-button
+		= link_to "clica aqui", "#start", :id => "left-click"
 
-.footer
-	.container
-		.footer-wrapper
-			Copyright &#169; Novos Tempos 2012
+	.right-button
+		= link_to "clica aqui", "#box2", :id => "right-click"
 
-:javascript
+	.footer
+		.container
+			.footer-wrapper
+				Copyright &#169; Novos Tempos 2012
 
-$(document).ready(function () {
-	$.localScroll.defaults.axis = 'x';
-	$.localScroll();
-});
+	:javascript
+
+	$(document).ready(function () {
+		$.localScroll.defaults.axis = 'x';
+		$.localScroll();
+		$('.left-button').hide();
+		$('#left-click').click(function(){
+			$('.left-button').hide();
+			$('.right-button').show();
+		});
+
+		$('#right-click').click(function(){
+			$('.right-button').hide();
+			$('.left-button').show();
+		});
+	});

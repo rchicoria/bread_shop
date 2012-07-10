@@ -20,10 +20,11 @@ body {
 }
 
 .horizontal-scroll-container {
-    width: 2000px;
+    width: 2100px;
     margin: 0 auto;
     text-align: left;
     position: relative;
+    left: 70px;
 }
 
 .wrapper {
@@ -34,7 +35,7 @@ body {
 	margin-top: 250px;
 	z-index: 2;
 	position: relative;
-	width: 2000px;
+	width: 2300px;
 	-webkit-transition: all .3s ease-out;
 }
 
@@ -67,13 +68,10 @@ h1.login {
 }
 
 .box {
-	background: #111111;
-	border: 3px dashed #222222;
-	width: 500px;
+	width: 900px;
 	float: left;
 	line-height: 22px;
 	margin: 30px;
-	padding: 5px 30px 30px 30px;
 }
  
 .box p {
@@ -82,4 +80,38 @@ h1.login {
 	line-height:24px;
 	padding: 0 0 10px;
 	margin: 20px 0 10px 0;
+}
+
+.right-button {
+	position: fixed;
+	height: 350px;
+	width: 150px;
+	top: 251px;
+	z-index: 3;
+	right: 0;
+	background-color: #ffffff;
+	opacity:0.1;
+}
+
+.right-button:hover {
+	background-color: #ffffff;
+	opacity:0.2;
+}
+
+.left-button {
+	position: fixed;
+	height: 350px;
+	width: 150px;
+	top: 251px;
+	z-index: 3;
+	left: 0;
+	background-color: #ffffff;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+}
+
+.left-button:hover {
+	background-color: #ffffff;
+	opacity:0.2;
+	filter:alpha(opacity=20);
 }
