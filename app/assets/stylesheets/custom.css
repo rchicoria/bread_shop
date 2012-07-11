@@ -20,11 +20,11 @@ body {
 }
 
 .horizontal-scroll-container {
-    width: 2100px;
-    margin: 0 auto;
+    width: 49.9%;
     text-align: left;
     position: relative;
-    left: 70px;
+    display: inline-block;
+    height: 100%;
 }
 
 .wrapper {
@@ -35,8 +35,10 @@ body {
 	margin-top: 250px;
 	z-index: 2;
 	position: relative;
-	width: 2300px;
+	width: 200%;
 	-webkit-transition: all .3s ease-out;
+	display: inline-block;
+	height: 350px;
 }
 
 .header-wrapper {
@@ -69,9 +71,9 @@ h1.login {
 
 .box {
 	width: 900px;
-	float: left;
-	line-height: 22px;
-	margin: 30px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
 }
  
 .box p {
@@ -79,39 +81,46 @@ h1.login {
 	font-size: 16px;
 	line-height:24px;
 	padding: 0 0 10px;
-	margin: 20px 0 10px 0;
 }
 
 .right-button {
 	position: fixed;
 	height: 350px;
-	width: 150px;
+	width: 50px;
 	top: 251px;
 	z-index: 3;
 	right: 0;
 	background-color: #ffffff;
 	opacity:0.1;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	padding: 160px 0 140px 0;
 }
 
 .right-button:hover {
 	background-color: #ffffff;
 	opacity:0.2;
+	text-decoration: none;
 }
 
 .left-button {
 	position: fixed;
 	height: 350px;
-	width: 150px;
+	width: 50px;
 	top: 251px;
 	z-index: 3;
 	left: 0;
 	background-color: #ffffff;
 	opacity:0.1;
-	filter:alpha(opacity=10);
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	padding: 160px 0 140px 0;
 }
 
 .left-button:hover {
 	background-color: #ffffff;
 	opacity:0.2;
-	filter:alpha(opacity=20);
+	text-decoration: none;
 }

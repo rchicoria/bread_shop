@@ -12,20 +12,19 @@
 					= link_to "Entrar", "", :class => "btn btn-primary"
 
 	.wrapper
-		.horizontal-scroll-container{:style => "height: 350px;"}
+		.horizontal-scroll-container
 			#box1{:class => "box"}
 				%h2{:style => "color: #ffffff"}="Quem Somos"
 				%p
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper
+		.horizontal-scroll-container
 			#box2{:class => "box"}
 				%h2{:style => "color: #ffffff"}="Os nossos produtos"
 				%p
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit 
-	.left-button
-		= link_to "clica aqui", "#start", :id => "left-click"
+	= link_to "<", "#start", :id => "left-click", :class => 'left-button'
 
-	.right-button
-		= link_to "clica aqui", "#box2", :id => "right-click"
+	= link_to ">", "#box2", :id => "right-click", :class => 'right-button'
 
 	.footer
 		.container
