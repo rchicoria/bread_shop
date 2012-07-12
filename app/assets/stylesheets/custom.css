@@ -19,14 +19,13 @@ body {
     position: relative;
 }
 
-.horizontal-scroll-container {
+li.horizontal-scroll-container {
     width: 49.9%;
     text-align: left;
-    position: relative;
     height: 100%;
-    display: table-cell;
-    padding-top: 10px;
-    overflow: :hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .wrapper {
@@ -34,14 +33,13 @@ body {
 	min-height: 100%;
 	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
 	border-top: 1px solid white;
-	margin-top: 250px;
+	margin: 250px 0 0 0;
 	z-index: 2;
 	position: relative;
 	width: 200%;
 	-webkit-transition: all .3s ease-out;
-	display: table;
+	display: block;
 	height: 350px;
-	overflow: :hidden;
 }
 
 .header-wrapper {
@@ -77,7 +75,6 @@ h1.login {
     margin: 0 auto;
     text-align: left;
     position: relative;
-    overflow: :hidden;
     height: 100%;
 }
  
@@ -86,7 +83,6 @@ h1.login {
 	font-size: 16px;
 	line-height:24px;
 	padding: 0 0 10px;
-	overflow: :hidden;
 }
 
 .right-button {
@@ -138,7 +134,7 @@ h1.login {
 }
 
 .thumbnails{
-	height: 350px;
+	height: 80%;
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
