@@ -18,10 +18,45 @@
 				%p
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper
 		.horizontal-scroll-container
+
 			#box2{:class => "box"}
-				%h2{:style => "color: #ffffff"}="Os nossos produtos"
 				%p
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper egestas. Mauris interdum fringilla nisi. Cras a dapibus lectus. Praesent blandit 
+				%ul{:class => 'thumbnails'}
+					.nano
+						.content
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+							%li{:class=> 'span2'}
+								.thumbnail
+									= image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+
+
+
 	= link_to "<", "#start", :id => "left-click", :class => 'left-button'
 
 	= link_to ">", "#box2", :id => "right-click", :class => 'right-button'
@@ -31,19 +66,21 @@
 			.footer-wrapper
 				Copyright &#169; Novos Tempos 2012
 
-	:javascript
+:javascript
 
-	$(document).ready(function () {
-		$.localScroll.defaults.axis = 'x';
-		$.localScroll();
+$(document).ready(function () {
+	$.localScroll.defaults.axis = 'x';
+	$.localScroll();
+	$('.left-button').hide();
+	$('#left-click').click(function(){
 		$('.left-button').hide();
-		$('#left-click').click(function(){
-			$('.left-button').hide();
-			$('.right-button').show();
-		});
-
-		$('#right-click').click(function(){
-			$('.right-button').hide();
-			$('.left-button').show();
-		});
+		$('.right-button').show();
 	});
+
+	$('#right-click').click(function(){
+		$('.right-button').hide();
+		$('.left-button').show();
+	});
+
+	$(".nano").nanoScroller();
+});

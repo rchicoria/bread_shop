@@ -23,8 +23,10 @@ body {
     width: 49.9%;
     text-align: left;
     position: relative;
-    display: inline-block;
     height: 100%;
+    display: table-cell;
+    padding-top: 10px;
+    overflow: :hidden;
 }
 
 .wrapper {
@@ -37,8 +39,9 @@ body {
 	position: relative;
 	width: 200%;
 	-webkit-transition: all .3s ease-out;
-	display: inline-block;
+	display: table;
 	height: 350px;
+	overflow: :hidden;
 }
 
 .header-wrapper {
@@ -74,6 +77,8 @@ h1.login {
     margin: 0 auto;
     text-align: left;
     position: relative;
+    overflow: :hidden;
+    height: 100%;
 }
  
 .box p {
@@ -81,6 +86,7 @@ h1.login {
 	font-size: 16px;
 	line-height:24px;
 	padding: 0 0 10px;
+	overflow: :hidden;
 }
 
 .right-button {
@@ -124,3 +130,24 @@ h1.login {
 	opacity:0.2;
 	text-decoration: none;
 }
+
+.dropdown-products-welcome{
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+
+.thumbnails{
+	height: 350px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.thumbnail{
+	margin: 0px 0px 10px 0px;
+}
+
+.nano { width: 500px; height: 500px; }
+.nano .content { padding: 10px; }
+.nano .pane   { background: #888; }
+.nano .slider { background: #111; }

@@ -22,7 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
 group :production do
   gem 'pg'
 end
