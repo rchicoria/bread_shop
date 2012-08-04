@@ -40,6 +40,8 @@ li.horizontal-scroll-container {
 	-webkit-transition: all .3s ease-out;
 	display: block;
 	height: 350px;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 .header-wrapper {
@@ -147,3 +149,6 @@ h1.login {
 .nano .content { padding: 10px; }
 .nano .pane   { background: #888; }
 .nano .slider { background: #111; }
+
+.wrapper .pane   { background: #888; }
+.wrapper .slider { background: #111; }
