@@ -5,11 +5,12 @@
 				= image_tag("logo.png", :height => '200px')
 				.login-form
 					%h1{:class => 'login'}= "Entrada"
-					%input{:class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :type => :text, :placeholder => "Email ou nº de telefone"}
-					%br
-					%input{:class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px",:type => :password, :placeholder => "Password"}
-					%br
-					= link_to "Entrar", "", :class => "btn btn-primary"
+					- @user = User.new
+					= semantic_form_for resource_name :as => resource do |f|
+						= f.inputs do
+							= f.input :email, :label => false, :input_html => { :class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :placeholder => "Email ou nº de telefone" }
+							= f.input :password, :label => false, :input_html => { :class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px", :placeholder => "Password" }
+						= button_to "Entrar", "", :class => "btn btn-primary"
 
 	%ul.wrapper
 		%li.horizontal-scroll-container
@@ -83,5 +84,4 @@ $(document).ready(function () {
 	});
 
 	$(".nano").nanoScroller();
-	$(".wrapper").nanoScroller();
 });

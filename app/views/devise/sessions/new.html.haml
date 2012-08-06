@@ -1,0 +1,106 @@
+= render 'registration_new'
+
+#start
+  .back
+    .container
+      .header-wrapper
+        = image_tag("logo.png", :height => '200px')
+        .login-form
+          %h1{:class => 'login'}= "Entrada"
+          = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+            = devise_error_messages!
+            = f.inputs do
+              = f.input :email, :label => false, :input_html => { :class => "input-xlarge focused input-login", :style => "height: 30px; font-size: 18px", :placeholder => "Email ou nº de telefone" }
+              = f.input :password, :label => false, :input_html => { :class => "input-xlarge input-login", :style => "height: 30px; font-size: 18px", :placeholder => "Password" }
+            .btn-group{:style => "float: right"}
+              = f.submit "Entrar", :class => "btn btn-primary"
+              %a{:class => "btn btn-primary dropdown-toggle", "data-toggle" => "dropdown"}
+                %span{:class => "caret"}
+              %ul{:class => "dropdown-menu"}
+                %li
+                  %a{"data-toggle" => "modal", :href => "#registration-new"}
+                    %i{:class => "icon-plus-sign"}
+                    = "Registar"
+                %li
+                  %a{:href => "#"}
+                    %i{:class => "icon-lock"}
+                    = "Recuperar password"
+            /= f.submit "Entrar", :class => "btn btn-primary", :style => "float: right"
+            -if devise_mapping.rememberable?
+              #remember-me
+                = f.input :remember_me, :as => :boolean, :label => "Manter sessão activa?"
+            /= render "devise/shared/links"
+
+  %ul.wrapper
+    %li.horizontal-scroll-container
+      #box1{:class => "box"}
+        %h2{:style => "color: #ffffff"}="Quem Somos"
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget eros libero. Fusce tempus quam sit amet erat mollis a fermentum nibh imperdiet. Fusce iaculis sapien in turpis aliquet porta. Donec tincidunt gravida tortor, vel dignissim augue convallis sit amet. Aliquam auctor ornare accumsan. Cras convallis elit tincidunt arcu semper
+    %li.horizontal-scroll-container
+
+      #box2{:class => "box"}
+        %p
+        %ul{:class => 'thumbnails'}
+          .nano
+            .content
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+              %li{:class=> 'span2'}
+                .thumbnail
+                  = image_tag "http://www.bread.ind.br/imagedocs/2038366696.jpg", :height => '120'
+
+
+
+  = link_to "<", "#start", :id => "left-click", :class => 'left-button'
+
+  = link_to ">", "#box2", :id => "right-click", :class => 'right-button'
+
+  .footer
+    .container
+      .footer-wrapper
+        Copyright &#169; Novos Tempos 2012
+
+:javascript
+
+$(document).ready(function () {
+  $.localScroll.defaults.axis = 'x';
+  $.localScroll();
+  $('.left-button').hide();
+  $('#left-click').click(function(){
+    $('.left-button').hide();
+    $('.right-button').show();
+  });
+
+  $('#right-click').click(function(){
+    $('.right-button').hide();
+    $('.left-button').show();
+  });
+
+  $(".nano").nanoScroller();
+});

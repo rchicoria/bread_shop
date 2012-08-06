@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Novos Tempos - Pão ao domicílio
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = yield

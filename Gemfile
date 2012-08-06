@@ -23,10 +23,23 @@ end
 gem 'jquery-rails'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem 'cancan'
+gem 'formtastic-bootstrap'
+gem 'formtastic', " ~> 2.1.1"
+gem 'attrtastic'
+
 group :production do
   gem 'pg'
 end
 gem 'heroku'
+gem "rspec-rails", :group => [:test, :development]
+
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

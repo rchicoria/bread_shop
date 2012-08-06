@@ -1,0 +1,15 @@
+%div{:class => "modal hide fade", :id => "registration-new"}
+  = semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    .modal-header
+      %button{:type => "button", :class => "close", "data-dismiss" => "modal"}
+        x
+      %h3="Página de registo"
+    .modal-body
+      = devise_error_messages!
+      = f.inputs do
+        = f.input :fullname, :label => "Nome completo", :required => false
+        = f.input :email, :required => false
+        = f.input :password, :required => false
+        = f.input :password_confirmation, :label => "Password (confirmação)", :required => false
+    .modal-footer
+      %div= f.submit "Sign up"
